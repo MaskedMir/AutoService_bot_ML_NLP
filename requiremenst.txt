@@ -1,0 +1,7 @@
+nltk
+scikit-learn
+python-telegram-bot
+gtts
+SpeechRecognition
+PyAudio
+natasha
