@@ -4,6 +4,8 @@ from utils import clear_phrase
 from dialogue_base import generate_answer
 import random
 import datetime
+from gtts import gTTS
+
 
 def get_answer_by_intent(intent):
     return random.choice(BOT_CONFIG['intents'][intent]['responses'])
@@ -16,16 +18,6 @@ def log_dialog(user_text, bot_response):
         timestamp = datetime.datetime.now().strftime("[%Y-%m-%d %H:%M:%S]")
         log.write(f"{timestamp} USER: {user_text}\n")
         log.write(f"{timestamp} BOT : {bot_response}\n\n")
-
-
-from config import BOT_CONFIG
-from ml_model import classify_intent
-from utils import clear_phrase
-from dialogue_base import generate_answer
-import random
-import datetime
-from gtts import gTTS
-import os
 
 
 # Функция для логирования диалога
